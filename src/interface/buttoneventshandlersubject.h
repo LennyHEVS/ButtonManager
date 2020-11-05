@@ -13,7 +13,7 @@ class ButtonEventsHandlerObserver;
 class ButtonEventsHandlerSubject
 {
 public:
-	typedef uint8_t ButtonIndex;
+	typedef uint16_t ButtonIndex;
 
 	virtual ~ButtonEventsHandlerSubject() {}
 

@@ -114,15 +114,19 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc" />
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="app" />
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="config" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="event" />
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="interface" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="mdw/button" />
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="mdw/trace" />
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="mdw/trace/config" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="platform/f7-disco-gcc/board" />
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="platform/f7-disco-gcc/config" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="platform/f7-disco-gcc/mcu/critical" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="platform/f7-disco-gcc/mcu/hal" />
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup" />
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="xf/config" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="xf/core" />
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="xf/include" />
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="xf/include/xf/interface" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="xf/port/active-qt" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="xf/port/default" />
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="xf/port/default-cmsis-os" />

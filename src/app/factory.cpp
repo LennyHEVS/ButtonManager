@@ -15,14 +15,16 @@ void Factory::initialize()
 
 ButtonEventsLogger* Factory::btnEventsLogger;
 ButtonEventsHandler* Factory::btnEventsHandler;
+ButtonsController* Factory::btnController;
 
 void Factory::build()
 {
 	btnEventsLogger = new ButtonEventsLogger();
 	btnEventsHandler = new ButtonEventsHandler();
+	btnController = new ButtonsController();
 
 	btnEventsHandler->subscribe(btnEventsLogger);
-	ButtonsController::getInstance().registerCallback((ButtonsControllerCallbackProvider*)btnEventsHandler,(ButtonsControllerCallbackProvider::CallbackMethod)&ButtonEventsHandler::onButtonChanged);
+	btnController->registerCallback(btnEventsHandler,(ButtonsControllerCallbackProvider::CallbackMethod)&ButtonEventsHandler::onButtonChanged);
 }
 
 } /* namespace app */

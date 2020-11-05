@@ -22,6 +22,7 @@ class ButtonsController : public ButtonsControllerCallbackCaller, public ButtonI
 public:
 	#define BTN_COUNT	4
 public:
+	ButtonsController();
 	~ButtonsController();
 
 	inline static ButtonsController & getInstance() { assert(_pInstance); return *_pInstance; }
@@ -60,7 +61,6 @@ protected:
 	btnMethod _btnOperation[BTN_COUNT];		///< Array of pointers to button functions.
 
 private:
-	ButtonsController();
 	void doCheckButtons();
 
 	int _debounceDelay = 100;

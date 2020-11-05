@@ -17,6 +17,6 @@
  * - Remove this comment in your config file.
  */
 
-#define BTNCONTROLLER_TRACE_ENABLE      1
+#define BTNCONTROLLER_TRACE_ENABLE      0
 
 #endif // BOARD_BTNCONTROLLER_CONFIG_H

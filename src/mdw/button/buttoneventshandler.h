@@ -18,6 +18,7 @@
 #include "interface/buttonscontrollercallbackprovider.h"
 #include "buttonstatesm.h"
 
+#include <assert.h>
 #include <list>
 #include <vector>
 
@@ -34,6 +35,9 @@ class ButtonEventsHandler : public ButtonEventsHandlerSubject, public ButtonsCon
 public :
 	ButtonEventsHandler();
 	~ButtonEventsHandler();
+
+	inline static ButtonEventsHandler & getInstance() { assert(_pInstance); return *_pInstance; }
+
 public:
 	bool subscribe(ButtonEventsHandlerObserver * observer);			    ///< @brief Registers a new observer. Returns true on success.
 	void unsubscribe(ButtonEventsHandlerObserver * observer);	        ///< @brief Un-subscribes a registered observer.
@@ -43,6 +47,8 @@ protected:
 	void notifyButtonShortPressed(ButtonIndex buttonIndex);	            ///< @brief Notifies observers about a button short pressed.
     void notifyButtonLongPressed(ButtonIndex buttonIndex);              ///< @brief Notifies observers about a button long pressed.
 private:
+    static ButtonEventsHandler * _pInstance;
+
     std::list<ButtonEventsHandlerObserver*> _subscribers;
     std::vector<ButtonStateSM*> _btnSMs;
 };

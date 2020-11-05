@@ -21,7 +21,7 @@ void ButtonEventsLogger::onButtonShortPressed(ButtonIndex buttonIndex) {
 }
 
 void ButtonEventsLogger::onButtonLongPressed(ButtonIndex buttonIndex) {
-	pushEvent(new XFEvent(XFEvent::Event,buttonIndex-4,this));
+	pushEvent(new XFEvent(XFEvent::Event,buttonIndex+4,this));
 }
 
 XFEventStatus ButtonEventsLogger::processEvent() {
@@ -32,13 +32,13 @@ XFEventStatus ButtonEventsLogger::processEvent() {
 		string str("ButtonEventsLogger: Button ");
 		if(getCurrentEvent()->getId() < 4)
 		{
-			str += getCurrentEvent()->getId();
+			str += to_string(getCurrentEvent()->getId());
 			str += " short pressed";
 		}
 		else
 		{
-			str += getCurrentEvent()->getId() - 4;
-			str += " short pressed";
+			str += to_string(getCurrentEvent()->getId() - 4);
+			str += " long pressed";
 		}
 		Trace::out(str);
 		eventStatus = XFEventStatus::Consumed;

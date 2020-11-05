@@ -7,7 +7,12 @@
 #include "buttoneventshandler.h"
 #include "platform/f7-disco-gcc/board/buttonscontroller.h"
 
+ButtonEventsHandler * ButtonEventsHandler::_pInstance = nullptr;
+
 ButtonEventsHandler::ButtonEventsHandler() {
+	assert(!_pInstance);	// Only one instance of this class allowed!
+	_pInstance = this;
+
 	_btnSMs.clear();
 	for(uint32_t i=0 ; i<BTN_COUNT ; i++)
 	{
@@ -43,7 +48,8 @@ void ButtonEventsHandler::notifyButtonShortPressed(ButtonIndex buttonIndex) {
 
 void ButtonEventsHandler::onButtonChanged(ButtonIndex buttonIndex,
 		bool pressed) {
-	XFBehavior* btnStateSM = _btnSMs.at(buttonIndex);
+	XFBehavior* btnStateSM;
+	btnStateSM = (XFBehavior*)_btnSMs.at(buttonIndex);
 	XFEvent* e;
 	if(pressed)
 	{

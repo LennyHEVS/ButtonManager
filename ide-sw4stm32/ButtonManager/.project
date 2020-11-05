@@ -34,27 +34,27 @@
 		<link>
 			<name>event</name>
 			<type>2</type>
-			<location>PARENT-2-PROJECT_LOC/src/event</location>
+			<location>C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/event</location>
 		</link>
 		<link>
 			<name>interface</name>
 			<type>2</type>
-			<location>PARENT-2-PROJECT_LOC/src/interface</location>
+			<location>C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/interface</location>
 		</link>
 		<link>
 			<name>mdw</name>
 			<type>2</type>
-			<location>PARENT-2-PROJECT_LOC/src/mdw</location>
+			<location>C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/mdw</location>
 		</link>
 		<link>
 			<name>platform</name>
 			<type>2</type>
-			<location>PARENT-2-PROJECT_LOC/src/platform</location>
+			<location>C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/platform</location>
 		</link>
 		<link>
 			<name>xf</name>
 			<type>2</type>
-			<location>PARENT-2-PROJECT_LOC/src/xf</location>
+			<location>C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/xf</location>
 		</link>
 	</linkedResources>
 </projectDescription>

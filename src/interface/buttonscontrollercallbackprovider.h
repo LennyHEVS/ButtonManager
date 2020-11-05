@@ -1,6 +1,5 @@
 #ifndef INTERFACE_BUTTONS_CONTROLLER_CALLBACK_PROVIDER_H
 #define INTERFACE_BUTTONS_CONTROLLER_CALLBACK_PROVIDER_H
-#include <stdint.h>
 
 namespace interface {
 

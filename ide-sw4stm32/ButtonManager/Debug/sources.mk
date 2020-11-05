@@ -30,7 +30,6 @@ Src \
 app \
 event \
 mdw/button \
-mdw/trace/examples \
 platform/f7-disco-gcc/board \
 platform/f7-disco-gcc/mcu/critical \
 platform/f7-disco-gcc/mcu/hal \

@@ -87,7 +87,7 @@ XFEventStatus ButtonStateSM::processEvent() {
 				GEN(XFNullTransition);
 				break;
 			case BUTTON_LONG_PRESSED:
-				doNotifyButtonShortPressed();
+				doNotifyButtonLongPressed();
 				GEN(XFNullTransition);
 				break;
 			default:

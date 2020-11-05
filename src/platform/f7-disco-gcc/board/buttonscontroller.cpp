@@ -8,6 +8,7 @@
 #include "config/btncontroller-config.h"
 #include "event/evbuttonirq.h"
 #include "event/events.h"
+#include "main.h"
 #if (BTNCONTROLLER_TRACE_ENABLE != 0)
     #include "trace/trace.h"
 #endif // BTNCONTROLLER_TRACE_ENABLE
@@ -68,14 +69,14 @@ uint8_t ButtonsController::getBtns(uint8_t btnMask) {
 	{
 		if ((btnMask & mask) == mask && _btnOperation[i])
 		{
-			retVal += (this->*_btnOperation[i])();
+			retVal += (this->*_btnOperation[i])()<<i;
 		}
 	}
 	return retVal;
 }
 
 bool ButtonsController::getBtn0() {
-	bool btnState = HAL_GPIO_ReadPin(BUTTON0_GPIO_Port, BUTTON0_Pin);
+	bool btnState = 1-HAL_GPIO_ReadPin(BUTTON0_GPIO_Port, BUTTON0_Pin);
 
 
 	#if (BTNCONTROLLER_TRACE_ENABLE != 0)
@@ -94,7 +95,7 @@ bool ButtonsController::getBtn0() {
 }
 
 bool ButtonsController::getBtn1() {
-	bool btnState = HAL_GPIO_ReadPin(BUTTON1_GPIO_Port, BUTTON1_Pin);
+	bool btnState = 1-HAL_GPIO_ReadPin(BUTTON1_GPIO_Port, BUTTON1_Pin);
 
 
 		#if (BTNCONTROLLER_TRACE_ENABLE != 0)
@@ -113,7 +114,7 @@ bool ButtonsController::getBtn1() {
 }
 
 bool ButtonsController::getBtn2() {
-	bool btnState = HAL_GPIO_ReadPin(BUTTON2_GPIO_Port, BUTTON2_Pin);
+	bool btnState = 1-HAL_GPIO_ReadPin(BUTTON2_GPIO_Port, BUTTON2_Pin);
 
 
 		#if (BTNCONTROLLER_TRACE_ENABLE != 0)
@@ -132,7 +133,7 @@ bool ButtonsController::getBtn2() {
 }
 
 bool ButtonsController::getBtn3() {
-	bool btnState = HAL_GPIO_ReadPin(BUTTON3_GPIO_Port, BUTTON3_Pin);
+	bool btnState = 1-HAL_GPIO_ReadPin(BUTTON3_GPIO_Port, BUTTON3_Pin);
 
 
 		#if (BTNCONTROLLER_TRACE_ENABLE != 0)
@@ -178,11 +179,13 @@ XFEventStatus ButtonsController::processEvent() {
 			}
 			break;
 		case STATE_DEBOUNCE:
-			if (getCurrentEvent()->getEventType() == XFEvent::Timeout &&
-					getCurrentEvent()->getId() == EventIds::tmDebounceId)
+			if (getCurrentEvent()->getEventType() == XFEvent::Timeout)
 			{
-				_state = STATE_CHECK_BUTTONS;
-				eventStatus = XFEventStatus::Consumed;
+				if(getCurrentEvent()->getId() == EventIds::tmDebounceId)
+				{
+					_state = STATE_CHECK_BUTTONS;
+					eventStatus = XFEventStatus::Consumed;
+				}
 			}
 			break;
 		default:
@@ -206,16 +209,18 @@ XFEventStatus ButtonsController::processEvent() {
 
 void ButtonsController::doCheckButtons() {
 	uint8_t newBtnState = 0x00;
-	uint8_t pos = 0;
+	uint16_t pos = 0;
+	bool pressed = false;
 
 	newBtnState = getBtns((0x01<<BTN_COUNT)-0x01);
 	if(newBtnState!=_btnState)
 	{
+		pressed = newBtnState>_btnState;
 		while(((_btnState^newBtnState)>>pos)!=0x01)
 		{
 			pos++;
 		}
-		(_theCallbackProvider->*_theCallbackMethod)(pos,_btnState>newBtnState);
+		(_theCallbackProvider->*_theCallbackMethod)(pos,pressed);
 		_btnState = newBtnState;
 	}
 }

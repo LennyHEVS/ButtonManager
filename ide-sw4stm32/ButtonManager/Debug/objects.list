@@ -38,7 +38,6 @@
 "event/evbuttonreleased.o"
 "mdw/button/buttoneventshandler.o"
 "mdw/button/buttonstatesm.o"
-"mdw/trace/examples/trace-example01.o"
 "platform/f7-disco-gcc/board/buttonscontroller.o"
 "platform/f7-disco-gcc/board/ledcontroller.o"
 "platform/f7-disco-gcc/board/trace.o"

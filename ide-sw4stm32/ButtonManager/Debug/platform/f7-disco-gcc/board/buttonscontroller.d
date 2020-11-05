@@ -41,8 +41,7 @@ platform/f7-disco-gcc/board/buttonscontroller.o: \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\mdw\trace\trace.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\platform\f7-disco-gcc\config\trace-config.h \
- C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/config/btncontroller-config.h \
- C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/main.h \
+ c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\platform\f7-disco-gcc\config\btncontroller-config.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\event\evbuttonirq.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\customevent.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\xf.h \
@@ -55,6 +54,7 @@ platform/f7-disco-gcc/board/buttonscontroller.o: \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\event.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\event\events.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\event\events.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/main.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\platform\f7-disco-gcc\board\buttonscontroller.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\interface\buttonirq.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\interface\buttonscontrollercallbackcaller.h \
@@ -149,9 +149,7 @@ c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\mdw\trace\trace.
 
 c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\platform\f7-disco-gcc\config\trace-config.h:
 
-C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/config/btncontroller-config.h:
-
-C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/main.h:
+c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\platform\f7-disco-gcc\config\btncontroller-config.h:
 
 c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\event\evbuttonirq.h:
 
@@ -176,6 +174,8 @@ c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\ev
 c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\event\events.h:
 
 c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\event\events.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/main.h:
 
 c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\platform\f7-disco-gcc\board\buttonscontroller.h:
 

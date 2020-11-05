@@ -24,6 +24,7 @@ public:
 protected:
     static ButtonEventsLogger* btnEventsLogger;
     static ButtonEventsHandler* btnEventsHandler;
+    static ButtonsController* btnController;
 };
 
 } /* namespace app */
