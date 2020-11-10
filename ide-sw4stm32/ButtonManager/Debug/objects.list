@@ -31,6 +31,7 @@
 "Src/stm32f7xx_it.o"
 "Src/syscalls.o"
 "Src/system_stm32f7xx.o"
+"app/buttoneventsledflasher.o"
 "app/buttoneventslogger.o"
 "app/factory.o"
 "event/evbuttonirq.o"

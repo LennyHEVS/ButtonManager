@@ -7,6 +7,7 @@
 #ifdef __cplusplus
 
 #include "buttoneventslogger.h"
+#include "buttoneventsledflasher.h"
 #include "mdw/button/buttoneventshandler.h"
 #include "platform/f7-disco-gcc/board/buttonscontroller.h"
 
@@ -23,7 +24,11 @@ public:
 
 protected:
     static ButtonEventsLogger* btnEventsLogger;
+    static ButtonEventsLedFlasher* btnEventsLedFlasher;
+
     static ButtonEventsHandler* btnEventsHandler;
+
+    static LedController* ledController;
     static ButtonsController* btnController;
 };
 
