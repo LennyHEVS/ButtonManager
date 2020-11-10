@@ -12,7 +12,7 @@ ButtonStateSM::ButtonStateSM(ButtonIndex index) {
 
 	_theHandler = nullptr;
 
-	GEN(XFInitialEvent);
+	startBehavior();
 }
 
 ButtonStateSM::~ButtonStateSM() {

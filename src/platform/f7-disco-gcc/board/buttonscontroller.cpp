@@ -39,7 +39,7 @@ ButtonsController::ButtonsController() {
 	 * BUTTON3: PG6
 	 */
 	_state = STATE_INITIAL;
-	GEN(XFInitialEvent);
+	startBehavior();
 }
 
 ButtonsController::~ButtonsController() {
@@ -213,7 +213,7 @@ void ButtonsController::doCheckButtons() {
 	bool pressed = false;
 
 	newBtnState = getBtns((0x01<<BTN_COUNT)-0x01);
-	if(newBtnState!=_btnState)
+	while(newBtnState!=_btnState)
 	{
 		pressed = newBtnState>_btnState;
 		while(((_btnState^newBtnState)>>pos)!=0x01)
@@ -221,6 +221,14 @@ void ButtonsController::doCheckButtons() {
 			pos++;
 		}
 		(_theCallbackProvider->*_theCallbackMethod)(pos,pressed);
-		_btnState = newBtnState;
+		if(pressed)
+		{
+			_btnState = _btnState + (0x01<<pos);
+		}
+		else
+		{
+			_btnState = _btnState - (0x01<<pos);
+		}
+		pos = 0;
 	}
 }
