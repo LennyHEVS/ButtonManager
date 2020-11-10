@@ -1,5 +1,6 @@
 #include "trace/trace.h"
 #include "factory.h"
+#include <assert.h>
 
 namespace app
 {
@@ -15,6 +16,7 @@ void Factory::initialize()
 
 ButtonEventsLogger* Factory::btnEventsLogger;
 ButtonEventsLedFlasher* Factory::btnEventsLedFlasher;
+ButtonEventsFileLogger* Factory::btnEventsFileLogger;
 
 ButtonEventsHandler* Factory::btnEventsHandler;
 
@@ -25,14 +27,18 @@ void Factory::build()
 {
 	btnEventsLogger = new ButtonEventsLogger();
 	btnEventsLedFlasher = new ButtonEventsLedFlasher();
+	btnEventsFileLogger = new ButtonEventsFileLogger();
 
 	btnEventsHandler = new ButtonEventsHandler();
 
 	ledController = new LedController();
 	btnController = new ButtonsController();
 
+	assert(btnEventsFileLogger->initialize("logs.txt"));
+
 	btnEventsHandler->subscribe(btnEventsLogger);
 	btnEventsHandler->subscribe(btnEventsLedFlasher);
+	btnEventsHandler->subscribe(btnEventsFileLogger);
 	btnController->registerCallback(btnEventsHandler,(ButtonsControllerCallbackProvider::CallbackMethod)&ButtonEventsHandler::onButtonChanged);
 }
 

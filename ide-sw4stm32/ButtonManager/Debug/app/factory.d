@@ -34,6 +34,8 @@ app/factory.o: \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc.h \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc_ex.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
@@ -58,6 +60,13 @@ app/factory.o: \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\port\default-idf\mutex-default.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\interface\mutex.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\timeout.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/app/buttoneventsfilelogger.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Middlewares/Third_Party/FatFs/src/ff.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Middlewares/Third_Party/FatFs/src/integer.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/ffconf.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/main.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/bsp_driver_sd.h \
+ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/fatfs_platform.h \
  C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/app/buttoneventsledflasher.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\platform\f7-disco-gcc\board\ledcontroller.h \
  c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\mdw\button\buttoneventshandler.h \
@@ -139,6 +148,10 @@ C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonM
 
 C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc_ex.h:
 
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h:
+
 C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:
 
 C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h:
@@ -186,6 +199,20 @@ c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\port\default-
 c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\interface\mutex.h:
 
 c:\users\favre\3emehes\ptr\buttonmanager\work\buttonmanager\src\xf\include\xf\timeout.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/app/buttoneventsfilelogger.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Middlewares/Third_Party/FatFs/src/ff.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Middlewares/Third_Party/FatFs/src/integer.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/ffconf.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/main.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/bsp_driver_sd.h:
+
+C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/ide-sw4stm32/ButtonManager/Inc/fatfs_platform.h:
 
 C:/Users/favre/3emeHES/PTR/ButtonManager/work/ButtonManager/src/app/buttoneventsledflasher.h:
 
