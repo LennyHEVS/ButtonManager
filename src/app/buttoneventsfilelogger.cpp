@@ -41,7 +41,7 @@ XFEventStatus ButtonEventsFileLogger::processEvent() {
 
 	if (getCurrentEvent()->getEventType() == XFEvent::Event)
 	{
-		string str("ButtonEventsLogger: Button ");
+		string str("ButtonEventsFileLogger: Button ");
 		if(getCurrentEvent()->getId() < 4)
 		{
 			str += to_string(getCurrentEvent()->getId());
