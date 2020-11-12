@@ -14,6 +14,8 @@ ButtonEventsFileLogger::ButtonEventsFileLogger() {
 }
 
 ButtonEventsFileLogger::~ButtonEventsFileLogger() {
+	f_close(_logFile);		//close file
+	f_mount(nullptr,"",0);	//Unmount sd card
 	delete _logFile;
 }
 
