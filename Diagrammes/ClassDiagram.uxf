@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>162</y>
+      <w>162</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>app::Factory
+--
+
+--
++initialize
++build</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>414</x>
+      <y>153</y>
+      <w>207</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>app::ButtonEventsLogger
+--
+--
+#processEvent : XFEventStatus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>360</y>
+      <w>360</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ButtonEventsHandler
+&lt;&lt;singleton&gt;&gt;
+--
++getInstance : ButtonEventsHandler&amp;
++onButtonChanged(uint16_t, bool)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>504</y>
+      <w>342</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>ButtonController
+&lt;&lt;singleton&gt;&gt;
+--
+#_btnState : uint8_t
+#_theCallbackProvider : ButtonsControllerCallbackProvider
+#_theCallbackMethod : CallbackMethod
+#_btnOperation[] : btnMethod
+-_debounceDelay : int
+--
++getInstance : ButtonController&amp;
++getBtn(uint8_t) : bool
++getBtns(uint8_t) : uint8_t
++btnCount : uint8_t
++getBtn0 : bool
++getBtn1 : bool
++getBtn2 : bool
++getBtn3 : bool
++getState : ControllerState
+#processEvent : XFEventStatus
+-doCheckButtons</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>117</x>
+      <y>558</y>
+      <w>171</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>XF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1404</x>
+      <y>99</y>
+      <w>207</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>ButtonEventsHandlerObserver
+&lt;&lt;interface&gt;&gt;
+--
+#onButtonShortPress(uint16_t)
+#onButtonLongPress(uint16_t)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1323</x>
+      <y>252</y>
+      <w>351</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>ButtonEventsHandlerSubject
+&lt;&lt;interface&gt;&gt;
+--
+#subscribe(ButtonEventsHandlerObserver* observer) :  bool
+#unsubscribe(ButtonEventsHandlerObserver* observer)
+#notifyButtonShortPressed(uint16_t)
+#notifyButtonLongPressed(uint16_t)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1404</x>
+      <y>387</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>ButtonsControllerCallbackProvider
+&lt;&lt;interface&gt;&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1350</x>
+      <y>522</y>
+      <w>315</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ButtonsControllerCallbackCaller
+&lt;&lt;interface&gt;&gt;
+--
+#registerCallback(ButtonsControllerCallbackProvider*,
+                 CallbackMethod) : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1404</x>
+      <y>657</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>ButtonIrq
+&lt;&lt;interface&gt;&gt;
+--
+#onIrq</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>171</y>
+      <w>189</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>198</y>
+      <w>423</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0;140.0;150.0;440.0;150.0;440.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>225</y>
+      <w>171</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;370.0;170.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>837</x>
+      <y>567</y>
+      <w>432</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>LedController
+&lt;&lt;singleton&gt;&gt;
+--
+#_ledOperation[] : ledMethod
+--
++getInstance : LedController&amp;
++setLed(uint8_t,bool)
++setLeds(uint8_t,bool)
++ledCount : uint8_t
++setLed0(bool)
++setLed1(bool)
++setLed2(bool)
++setLed3(bool)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>153</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>app::ButtonEventsLedFlasher
+--
+-_blinkDelay : int
+--
+#processEvent : XFEventStatus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>135</y>
+      <w>207</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>app::ButtonEventsFileLogger
+--
+-_logFile : FIL*
+-_filePath : string
+--
++initialize(string) : bool
+#processEvent : XFEventStatus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>27</y>
+      <w>927</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=1</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0;1000.0;10.0;1000.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>207</x>
+      <y>72</y>
+      <w>576</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=1</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;610.0;10.0;610.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>171</x>
+      <y>639</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>XFBehavior</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>864</y>
+      <w>225</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ButtonController::ControllerState
+&lt;&lt;enum&gt;&gt;
+--
+STATE_INITIAL
+STATE_CHECK_BUTTONS
+STATE_DEBOUNCE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>549</x>
+      <y>783</y>
+      <w>36</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>252</y>
+      <w>837</w>
+      <h>333</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;260.0;900.0;260.0;900.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>729</x>
+      <y>531</y>
+      <w>639</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>690.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>729</x>
+      <y>711</y>
+      <w>801</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>870.0;10.0;870.0;70.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>639</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>963</x>
+      <y>297</y>
+      <w>378</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>400.0;10.0;320.0;10.0;320.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>963</x>
+      <y>414</y>
+      <w>459</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>490.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>0</y>
+      <w>1026</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1120.0;110.0;1120.0;10.0;10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>198</y>
+      <w>297</w>
+      <h>459</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;490.0;10.0;130.0;310.0;130.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>342</y>
+      <w>234</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ButtonStateSM
+--
+#_btnIndex : uint8_t
+#_longPressDelay : int
+--
+#subscribe(ButtonEventsHandler*)
+#unsubscribe(ButtonEventsHandler*)
+#processEvent : XFEventStatus
+#doNotifyButtonShortPressed
+#doNotifyButtonLongPressed
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>549</x>
+      <y>387</y>
+      <w>81</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+0..n
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>792</x>
+      <y>0</y>
+      <w>738</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>800.0;110.0;800.0;10.0;10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>216</y>
+      <w>558</w>
+      <h>441</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;470.0;10.0;110.0;600.0;110.0;600.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>0</y>
+      <w>468</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>500.0;110.0;500.0;10.0;10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>207</y>
+      <w>828</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;480.0;10.0;120.0;900.0;120.0;900.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>198</y>
+      <w>117</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;observing&gt;&gt;</panel_attributes>
+    <additional_attributes>110.0;180.0;110.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>891</x>
+      <y>207</y>
+      <w>108</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;observing&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;70.0;100.0;70.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>216</y>
+      <w>90</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;observing&gt;&gt;
+
+
+</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>963</x>
+      <y>126</y>
+      <w>459</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n
+</panel_attributes>
+    <additional_attributes>10.0;270.0;260.0;270.0;260.0;10.0;490.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>423</y>
+      <w>81</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;callback&gt;&gt;
+
+
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1494</x>
+      <y>441</y>
+      <w>27</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1503</x>
+      <y>171</y>
+      <w>27</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1098</x>
+      <y>207</y>
+      <w>27</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;400.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>351</y>
+      <w>180</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>ButtonStateSM::ButtonState
+&lt;&lt;enum&gt;&gt;
+--
+INITIAL_STATE
+WAIT_BUTTON_PRESSED
+BUTTON_PRESSED
+BUTTON_SHORT_PRESSED
+BUTTON_LONG_PRESSED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>225</x>
+      <y>396</y>
+      <w>117</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>468</y>
+      <w>117</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;200.0;110.0;200.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>549</x>
+      <y>414</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
