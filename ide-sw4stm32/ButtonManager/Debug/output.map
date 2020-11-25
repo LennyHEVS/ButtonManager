@@ -14754,7 +14754,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
                 0x00001837       0x22 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(ButtonManager.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x8af34
+.debug_info     0x00000000    0x8af32
  .debug_info    0x00000000      0xa96 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
  .debug_info    0x00000a96      0xd9e Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o
  .debug_info    0x00001834     0x11a8 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
@@ -14791,30 +14791,30 @@ OUTPUT(ButtonManager.elf elf32-littlearm)
  .debug_info    0x0003112c     0x7907 app/buttoneventsfilelogger.o
  .debug_info    0x00038a33     0x341f app/buttoneventsledflasher.o
  .debug_info    0x0003be52     0x78d8 app/buttoneventslogger.o
- .debug_info    0x0004372a     0x60bb app/factory.o
- .debug_info    0x000497e5      0xbba event/evbuttonirq.o
- .debug_info    0x0004a39f     0x9312 mdw/button/buttoneventshandler.o
- .debug_info    0x000536b1     0x2fb4 mdw/button/buttonstatesm.o
- .debug_info    0x00056665     0x40ab platform/f7-disco-gcc/board/buttonscontroller.o
- .debug_info    0x0005a710     0x7ece platform/f7-disco-gcc/board/ledcontroller.o
- .debug_info    0x000625de     0x5855 platform/f7-disco-gcc/board/trace.o
- .debug_info    0x00067e33     0x5103 platform/f7-disco-gcc/mcu/critical/critical.o
- .debug_info    0x0006cf36     0x3072 platform/f7-disco-gcc/mcu/hal/uart.o
- .debug_info    0x0006ffa8       0x22 startup/startup_stm32f746xx.o
- .debug_info    0x0006ffca     0x3119 xf/core/behavior.o
- .debug_info    0x000730e3      0xac8 xf/core/customevent.o
- .debug_info    0x00073bab      0x511 xf/core/initialevent.o
- .debug_info    0x000740bc      0xa86 xf/core/nulltransition.o
- .debug_info    0x00074b42      0x65f xf/core/timeout.o
- .debug_info    0x000751a1     0x350c xf/port/default/dispatcher-default.o
- .debug_info    0x000786ad      0xd13 xf/port/default/resourcefactory-default.o
- .debug_info    0x000793c0     0x8fda xf/port/default/timeoutmanager-default.o
- .debug_info    0x0008239a      0xb06 xf/port/default/xf-default.o
- .debug_info    0x00082ea0     0x4977 xf/port/default-idf/eventqueue-default.o
- .debug_info    0x00087817      0xa5e xf/port/default-idf/mutex-default.o
- .debug_info    0x00088275     0x2cbf xf/port/idf-stm32cube/port-functions.o
+ .debug_info    0x0004372a     0x60ba app/factory.o
+ .debug_info    0x000497e4      0xbba event/evbuttonirq.o
+ .debug_info    0x0004a39e     0x9312 mdw/button/buttoneventshandler.o
+ .debug_info    0x000536b0     0x2fb4 mdw/button/buttonstatesm.o
+ .debug_info    0x00056664     0x40aa platform/f7-disco-gcc/board/buttonscontroller.o
+ .debug_info    0x0005a70e     0x7ece platform/f7-disco-gcc/board/ledcontroller.o
+ .debug_info    0x000625dc     0x5855 platform/f7-disco-gcc/board/trace.o
+ .debug_info    0x00067e31     0x5103 platform/f7-disco-gcc/mcu/critical/critical.o
+ .debug_info    0x0006cf34     0x3072 platform/f7-disco-gcc/mcu/hal/uart.o
+ .debug_info    0x0006ffa6       0x22 startup/startup_stm32f746xx.o
+ .debug_info    0x0006ffc8     0x3119 xf/core/behavior.o
+ .debug_info    0x000730e1      0xac8 xf/core/customevent.o
+ .debug_info    0x00073ba9      0x511 xf/core/initialevent.o
+ .debug_info    0x000740ba      0xa86 xf/core/nulltransition.o
+ .debug_info    0x00074b40      0x65f xf/core/timeout.o
+ .debug_info    0x0007519f     0x350c xf/port/default/dispatcher-default.o
+ .debug_info    0x000786ab      0xd13 xf/port/default/resourcefactory-default.o
+ .debug_info    0x000793be     0x8fda xf/port/default/timeoutmanager-default.o
+ .debug_info    0x00082398      0xb06 xf/port/default/xf-default.o
+ .debug_info    0x00082e9e     0x4977 xf/port/default-idf/eventqueue-default.o
+ .debug_info    0x00087815      0xa5e xf/port/default-idf/mutex-default.o
+ .debug_info    0x00088273     0x2cbf xf/port/idf-stm32cube/port-functions.o
 
-.debug_abbrev   0x00000000    0x107f5
+.debug_abbrev   0x00000000    0x107cf
  .debug_abbrev  0x00000000      0x240 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
  .debug_abbrev  0x00000240      0x298 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o
  .debug_abbrev  0x000004d8      0x317 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
@@ -14851,28 +14851,28 @@ OUTPUT(ButtonManager.elf elf32-littlearm)
  .debug_abbrev  0x00005914      0xaf8 app/buttoneventsfilelogger.o
  .debug_abbrev  0x0000640c      0x758 app/buttoneventsledflasher.o
  .debug_abbrev  0x00006b64      0xae2 app/buttoneventslogger.o
- .debug_abbrev  0x00007646      0x903 app/factory.o
- .debug_abbrev  0x00007f49      0x496 event/evbuttonirq.o
- .debug_abbrev  0x000083df      0xb8b mdw/button/buttoneventshandler.o
- .debug_abbrev  0x00008f6a      0x755 mdw/button/buttonstatesm.o
- .debug_abbrev  0x000096bf      0x8a1 platform/f7-disco-gcc/board/buttonscontroller.o
- .debug_abbrev  0x00009f60      0x8b6 platform/f7-disco-gcc/board/ledcontroller.o
- .debug_abbrev  0x0000a816      0x941 platform/f7-disco-gcc/board/trace.o
- .debug_abbrev  0x0000b157      0x6e2 platform/f7-disco-gcc/mcu/critical/critical.o
- .debug_abbrev  0x0000b839      0x6f7 platform/f7-disco-gcc/mcu/hal/uart.o
- .debug_abbrev  0x0000bf30       0x12 startup/startup_stm32f746xx.o
- .debug_abbrev  0x0000bf42      0x7b4 xf/core/behavior.o
- .debug_abbrev  0x0000c6f6      0x476 xf/core/customevent.o
- .debug_abbrev  0x0000cb6c      0x2b5 xf/core/initialevent.o
- .debug_abbrev  0x0000ce21      0x476 xf/core/nulltransition.o
- .debug_abbrev  0x0000d297      0x2d3 xf/core/timeout.o
- .debug_abbrev  0x0000d56a      0x81e xf/port/default/dispatcher-default.o
- .debug_abbrev  0x0000dd88      0x570 xf/port/default/resourcefactory-default.o
- .debug_abbrev  0x0000e2f8      0xcc0 xf/port/default/timeoutmanager-default.o
- .debug_abbrev  0x0000efb8      0x532 xf/port/default/xf-default.o
- .debug_abbrev  0x0000f4ea      0x891 xf/port/default-idf/eventqueue-default.o
- .debug_abbrev  0x0000fd7b      0x484 xf/port/default-idf/mutex-default.o
- .debug_abbrev  0x000101ff      0x5f6 xf/port/idf-stm32cube/port-functions.o
+ .debug_abbrev  0x00007646      0x8f3 app/factory.o
+ .debug_abbrev  0x00007f39      0x496 event/evbuttonirq.o
+ .debug_abbrev  0x000083cf      0xb8b mdw/button/buttoneventshandler.o
+ .debug_abbrev  0x00008f5a      0x755 mdw/button/buttonstatesm.o
+ .debug_abbrev  0x000096af      0x88b platform/f7-disco-gcc/board/buttonscontroller.o
+ .debug_abbrev  0x00009f3a      0x8b6 platform/f7-disco-gcc/board/ledcontroller.o
+ .debug_abbrev  0x0000a7f0      0x941 platform/f7-disco-gcc/board/trace.o
+ .debug_abbrev  0x0000b131      0x6e2 platform/f7-disco-gcc/mcu/critical/critical.o
+ .debug_abbrev  0x0000b813      0x6f7 platform/f7-disco-gcc/mcu/hal/uart.o
+ .debug_abbrev  0x0000bf0a       0x12 startup/startup_stm32f746xx.o
+ .debug_abbrev  0x0000bf1c      0x7b4 xf/core/behavior.o
+ .debug_abbrev  0x0000c6d0      0x476 xf/core/customevent.o
+ .debug_abbrev  0x0000cb46      0x2b5 xf/core/initialevent.o
+ .debug_abbrev  0x0000cdfb      0x476 xf/core/nulltransition.o
+ .debug_abbrev  0x0000d271      0x2d3 xf/core/timeout.o
+ .debug_abbrev  0x0000d544      0x81e xf/port/default/dispatcher-default.o
+ .debug_abbrev  0x0000dd62      0x570 xf/port/default/resourcefactory-default.o
+ .debug_abbrev  0x0000e2d2      0xcc0 xf/port/default/timeoutmanager-default.o
+ .debug_abbrev  0x0000ef92      0x532 xf/port/default/xf-default.o
+ .debug_abbrev  0x0000f4c4      0x891 xf/port/default-idf/eventqueue-default.o
+ .debug_abbrev  0x0000fd55      0x484 xf/port/default-idf/mutex-default.o
+ .debug_abbrev  0x000101d9      0x5f6 xf/port/idf-stm32cube/port-functions.o
 
 .debug_loc      0x00000000    0x26d01
  .debug_loc     0x00000000      0x10d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
@@ -15400,7 +15400,7 @@ OUTPUT(ButtonManager.elf elf32-littlearm)
  .debug_line    0x00036b52      0xc15 xf/port/default-idf/mutex-default.o
  .debug_line    0x00037767     0x1688 xf/port/idf-stm32cube/port-functions.o
 
-.debug_str      0x00000000   0x1292ec
+.debug_str      0x00000000   0x129313
  .debug_str     0x00000000    0xf6550 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
                               0xf6d50 (size before relaxing)
  .debug_str     0x000f6550      0x637 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o
@@ -15481,41 +15481,41 @@ OUTPUT(ButtonManager.elf elf32-littlearm)
                               0x169d3 (size before relaxing)
  .debug_str     0x0011ae49      0x328 mdw/button/buttonstatesm.o
                                0xd6cd (size before relaxing)
- .debug_str     0x0011b171      0x7b9 platform/f7-disco-gcc/board/buttonscontroller.o
-                             0x102647 (size before relaxing)
- .debug_str     0x0011b92a     0x488b platform/f7-disco-gcc/board/ledcontroller.o
+ .debug_str     0x0011b171      0x7e0 platform/f7-disco-gcc/board/buttonscontroller.o
+                             0x10266e (size before relaxing)
+ .debug_str     0x0011b951     0x488b platform/f7-disco-gcc/board/ledcontroller.o
                              0x10a22b (size before relaxing)
- .debug_str     0x001201b5      0x161 platform/f7-disco-gcc/board/trace.o
+ .debug_str     0x001201dc      0x161 platform/f7-disco-gcc/board/trace.o
                              0x103ce3 (size before relaxing)
- .debug_str     0x00120316      0x10b platform/f7-disco-gcc/mcu/critical/critical.o
+ .debug_str     0x0012033d      0x10b platform/f7-disco-gcc/mcu/critical/critical.o
                              0x103c4e (size before relaxing)
- .debug_str     0x00120421      0x254 platform/f7-disco-gcc/mcu/hal/uart.o
+ .debug_str     0x00120448      0x254 platform/f7-disco-gcc/mcu/hal/uart.o
                               0xff3c0 (size before relaxing)
- .debug_str     0x00120675       0x2f startup/startup_stm32f746xx.o
+ .debug_str     0x0012069c       0x2f startup/startup_stm32f746xx.o
                                  0x8c (size before relaxing)
- .debug_str     0x001206a4      0x34a xf/core/behavior.o
+ .debug_str     0x001206cb      0x34a xf/core/behavior.o
                                0xd5ce (size before relaxing)
- .debug_str     0x001209ee       0x88 xf/core/customevent.o
+ .debug_str     0x00120a15       0x88 xf/core/customevent.o
                                0x7b3d (size before relaxing)
- .debug_str     0x00120a76      0x141 xf/core/initialevent.o
+ .debug_str     0x00120a9d      0x141 xf/core/initialevent.o
                                0x3514 (size before relaxing)
- .debug_str     0x00120bb7      0x185 xf/core/nulltransition.o
+ .debug_str     0x00120bde      0x185 xf/core/nulltransition.o
                                0x7b08 (size before relaxing)
- .debug_str     0x00120d3c      0x222 xf/core/timeout.o
+ .debug_str     0x00120d63      0x222 xf/core/timeout.o
                                0x360a (size before relaxing)
- .debug_str     0x00120f5e      0x957 xf/port/default/dispatcher-default.o
+ .debug_str     0x00120f85      0x957 xf/port/default/dispatcher-default.o
                                0xd9c2 (size before relaxing)
- .debug_str     0x001218b5      0x55c xf/port/default/resourcefactory-default.o
+ .debug_str     0x001218dc      0x55c xf/port/default/resourcefactory-default.o
                                0x7dbf (size before relaxing)
- .debug_str     0x00121e11     0x365e xf/port/default/timeoutmanager-default.o
+ .debug_str     0x00121e38     0x365e xf/port/default/timeoutmanager-default.o
                               0x15b5b (size before relaxing)
- .debug_str     0x0012546f       0xe9 xf/port/default/xf-default.o
+ .debug_str     0x00125496       0xe9 xf/port/default/xf-default.o
                                0x7f37 (size before relaxing)
- .debug_str     0x00125558     0x3ae9 xf/port/default-idf/eventqueue-default.o
+ .debug_str     0x0012557f     0x3ae9 xf/port/default-idf/eventqueue-default.o
                                0xbb76 (size before relaxing)
- .debug_str     0x00129041      0x242 xf/port/default-idf/mutex-default.o
+ .debug_str     0x00129068      0x242 xf/port/default-idf/mutex-default.o
                                0x7a28 (size before relaxing)
- .debug_str     0x00129283       0x69 xf/port/idf-stm32cube/port-functions.o
+ .debug_str     0x001292aa       0x69 xf/port/idf-stm32cube/port-functions.o
                               0xff6f3 (size before relaxing)
 
 .comment        0x00000000       0x7f

@@ -34,9 +34,6 @@ public :
 
 	bool initialize(string path);
 protected:
-	typedef enum{btn0ShortPress=0, btn1ShortPress, btn2ShortPress, btn3ShortPress,
-				btn0LongPress, btn1LongPress, btn2LongPress, btn3LongPress} btnPressEvents;
-
 	void onButtonShortPressed(ButtonIndex buttonIndex);
 	void onButtonLongPressed(ButtonIndex buttonIndex);
 

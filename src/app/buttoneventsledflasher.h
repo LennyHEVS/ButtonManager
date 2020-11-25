@@ -29,12 +29,6 @@ public :
 	ButtonEventsLedFlasher();
 	~ButtonEventsLedFlasher();
 protected:
-	typedef enum{btn0ShortPress=0, btn1ShortPress, btn2ShortPress, btn3ShortPress,
-				btn0LongPress, btn1LongPress, btn2LongPress, btn3LongPress} btnPressEvents;
-	typedef enum{led0ShortFlash=0, led1ShortFlash, led2ShortFlash, led3ShortFlash,
-				led0LongFlash, led1LongFlash, led2LongFlash, led3LongFlash,
-				led0LongWait, led1LongWait, led2LongWait, led3LongWait} ledFlashTimeouts;
-
 	void onButtonShortPressed(ButtonIndex buttonIndex);
 	void onButtonLongPressed(ButtonIndex buttonIndex);
 
